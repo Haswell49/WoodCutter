@@ -1,0 +1,101 @@
+{
+    "name": "PlayerInputActions",
+    "maps": [
+        {
+            "name": "PC",
+            "id": "3fd9650b-5c03-40f4-bf88-f93913479595",
+            "actions": [
+                {
+                    "name": "Move",
+                    "type": "Value",
+                    "id": "413a98e0-6340-4abc-ba00-d439a24bb3d8",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "PC Test Modifier",
+                    "id": "82090eb9-0c3c-4f59-a8be-bfe18640093b",
+                    "path": "OneModifier",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "modifier",
+                    "id": "afb6d627-952a-4821-b9f5-170d08617ba2",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "binding",
+                    "id": "dd6f8022-ae96-48a5-8510-23b30156c119",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        },
+        {
+            "name": "Mobile",
+            "id": "47b99944-4d0c-462a-a319-1269798745c2",
+            "actions": [
+                {
+                    "name": "Move",
+                    "type": "Value",
+                    "id": "9b93bf94-37e6-4ae1-817c-0b5cf99d7b62",
+                    "expectedControlType": "Touch",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "3bf2f583-ec06-45a4-8a8f-9256befbf943",
+                    "path": "<Touchscreen>/touch0",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "PC",
+            "bindingGroup": "PC",
+            "devices": [
+                {
+                    "devicePath": "<Mouse>",
+                    "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
