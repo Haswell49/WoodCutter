@@ -24,7 +24,7 @@ namespace Characters
         {
             _direction = (_targetPosition - _rigidbody.position).normalized;
             _currentForce = _direction * _moveSpeed;
-            _rigidbody.AddForce(_currentForce);
+            _rigidbody.AddForce(_currentForce, ForceMode.Acceleration);
         }
 
         public void OnMove(InputAction.CallbackContext context)
@@ -40,8 +40,6 @@ namespace Characters
             var ray = _mainCamera.ScreenPointToRay(raycastVector);
 
             if (!Physics.Raycast(ray, out var hit)) return;
-            
-            if (hit.rigidbody == null) return;
             
             Debug.DrawLine(ray.origin, hit.point, Color.red);
 
